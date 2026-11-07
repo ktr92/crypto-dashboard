@@ -1,5 +1,17 @@
 // https://openapi.coinstats.app/
 
+export interface Asset {
+  id: string,
+  amount: number,
+  price: number,
+  date: Date,
+  totalAmount?: number,
+  totalProfit?: number,
+  grow?: boolean,
+  name?: string, 
+  growPercent?: number
+}
+
 export const cryptoData = {
   result: [
     {
@@ -611,7 +623,7 @@ export const cryptoData = {
   },
 }
 
-export const cryptoAssets = [
+export const cryptoAssets: Asset[] = [
   {
     id: 'bitcoin',
     amount: 0.02,
